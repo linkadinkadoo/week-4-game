@@ -31,10 +31,10 @@
               </div>
     
               <div class="panel-body">
-                <button id="button-1" class="btn btn-primary number" value="1"><h1>1</h1></button>
-                <button id="button-2" class="btn btn-primary number" value="2"><h1>2</h1></button>
-                <button id="button-3" class="btn btn-primary number" value="3"><h1>3</h1></button>
-                <button id="button-4" class="btn btn-primary number" value="4"><h1>4</h1></button>
+                <button id="gem1" class="btn btn-primary number" value="1"><h1>1</h1></button>
+                <button id="gem2" class="btn btn-primary number" value="2"><h1>2</h1></button>
+                <button id="gem3" class="btn btn-primary number" value="3"><h1>3</h1></button>
+                <button id="gem4" class="btn btn-primary number" value="4"><h1>4</h1></button>
                 <br><br>
 
                 <br><br>
@@ -50,9 +50,10 @@
                 <h3 class="panel-title">Result</h3>
               </div>
               <div class="panel-body">
-                <h1 id="first-number"></h1>
-                <h1 id="operator"></h1>
-                <h1 id="second-number"></h1>
+                <h1 id="first-gem"></h1>
+                <h1 id="second-gem"></h1>
+                <h1 id="third-gem"></h1>
+                <h1 id="fourth-gem"></h1>
                 <hr>
                 <h1 id="result"></h1>
               </div>
@@ -89,12 +90,25 @@ debugger
       console.log("gemRand is : " + gemRand);
     };
 
-    //gemNumber();
 
-    firstGem.gemNumber();
-    secondGem.gemNumber();
-    thirdGem.gemNumber();
-    fourthGem.gemNumber();
+     // Use a function to initialize our game.
+    // This way when the user hits clear, we can guarantee a reset of the app.
+    function resetGame() {
+        firstGem = "";
+        secondGem = "";
+        thirdGem = "";
+        forthGem = "";
+        
+
+        $("#first-gem, #second-gem, #third-gem, #fourth-gem").empty();
+      }
+
+    //run function for each of the four gems
+
+    firstGem = gemNumber();
+    secondGem = gemNumber();
+    thirdGem = gemNumber();
+    fourthGem = gemNumber();
 
     console.log("gemNumber is : " + firstGem);
     console.log("gemNumber is : " + secondGem);
@@ -102,18 +116,8 @@ debugger
     console.log("gemNumber is : " + fourthGem);
 
 
-     // Use a function to initialize our game.
-    // This way when the user hits clear, we can guarantee a reset of the app.
-
-
-    
-
-
-    //run function for each of the four gems
-
-
-    // Add an on click listener to all elements that have the class "number" (the gems)
-   
+    // Add an on click listener to the first gem
+    $("#gem1").on("click", function() {
 
 
 
