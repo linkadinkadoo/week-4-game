@@ -74,21 +74,22 @@
       var operator;
       var total; //this will hold the running total for all the clicked gem's values
       var target; //total that player must match to win between   19-120
-      var gemRand;
+      var gemRand=0;
       var wins;
       var losses;
 
       var isOperatorChosen; //unnecessary
       var isCalculated;
 
-      // create a function that randomly chooses a value for a gem
+      // create a function that randomly chooses a value between 1 and 12 for a gem
 debugger
       function gemNumber(){
-      gemRand=Math.floor((Math.random() * 12)+1)
-        return gemRand;
-    }
+      gemRand=Math.floor(Math.random() * 13);
+      return gemRand;
+      console.log("gemRand is : " + gemRand);
+    };
+
     //gemNumber();
-    console.log("gemRand is : " + gemRand);
 
     firstGem.gemNumber();
     secondGem.gemNumber();
