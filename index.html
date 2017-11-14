@@ -50,10 +50,6 @@
                 <h3 class="panel-title">Result</h3>
               </div>
               <div class="panel-body">
-                <h1 id="first-gem"></h1>
-                <h1 id="second-gem"></h1>
-                <h1 id="third-gem"></h1>
-                <h1 id="fourth-gem"></h1>
                 <hr>
                 <h1 id="result"></h1>
               </div>
@@ -73,69 +69,84 @@
       var thirdGem;
       var fourthGem;
       var operator;
-      var total; //this will hold the running total for all the clicked gem's values
+      var total = 0; //this will hold the running total for all the clicked gem's values
       var target; //total that player must match to win between   19-120
-      var gemRand=0;
+      var gemRand = 0;
       var wins;
       var losses;
 
-      var isOperatorChosen; //unnecessary
-      var isCalculated;
+      var isOperatorChosen; //unnecessary?
+      var isCalculated;  // unnecessary?
 
       // create a function that randomly chooses a value between 1 and 12 for a gem
-debugger
+        // debugger
       function gemNumber(){
-      gemRand=Math.floor(Math.random() * 13);
+      gemRand=(Math.floor(Math.random() * 12)+1);
       return gemRand;
       console.log("gemRand is : " + gemRand);
     };
 
-
-     // Use a function to initialize our game.
-    // This way when the user hits clear, we can guarantee a reset of the app.
+    // Add an on click listener to the element that has the class "reset"
+    $(".clear").on("click", function()
+    {
+             
+    //  reset of the app
     function resetGame() {
         firstGem = "";
         secondGem = "";
         thirdGem = "";
-        forthGem = "";
-        
+        fourthGem = "";
+        total = 0;
+        target = "";
 
         $("#first-gem, #second-gem, #third-gem, #fourth-gem").empty();
       }
+    });
 
-    //run function for each of the four gems
-
+    //give each gem a random number.
     firstGem = gemNumber();
     secondGem = gemNumber();
     thirdGem = gemNumber();
     fourthGem = gemNumber();
 
-    console.log("gemNumber is : " + firstGem);
-    console.log("gemNumber is : " + secondGem);
-    console.log("gemNumber is : " + thirdGem);
-    console.log("gemNumber is : " + fourthGem);
+    console.log("gemNumber1 is : " + firstGem);
+    console.log("gemNumber2 is : " + secondGem);
+    console.log("gemNumber3 is : " + thirdGem);
+    console.log("gemNumber4 is : " + fourthGem);
+
+    console.log("firstGem is " + firstGem);
+    console.log("firstGem is a " + typeof firstGem);
 
 
-    // Add an on click listener to the first gem
-    $("#gem1").on("click", function() {
+    // Add on click listeners to the gems
+    $("#gem1").on("click", function()
+    {
+        total = total + firstGem;
+    });
 
+    console.log("total after parse is " + total);
+    console.log("total is a " + typeof total);
 
+    $("#gem2").on("click", function()
+    {
+        total = total + secondGem;
+    });
+    
+    $("#gem3").on("click", function()
+    {
+        total = total + thirdGem;
+    });
 
-    // If operator is chosen, we should be writing the secondNumber, otherwise, the firstNumber
-        // !!! this needs to be put into a function or some recursive method
+    $("#gem4").on("click", function()
+    {
+        total = total + fourthGem;
+    });
 
-
-    // Add an on click listener to the element that has the class "reset"
-
-
-
-    // use function to keep adding to total
-
-
+    console.log("running total is: " + total);
+    
 
 
     // Set the HTML of the + to the value of the gem that was clicked
-
 
 
 
