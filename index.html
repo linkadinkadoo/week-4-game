@@ -60,48 +60,47 @@
 
       <script type="text/javascript">
       
-    // Make our variables global to the runtime of our application
-    $(document).ready(function() {
+        // Make our variables global to the runtime of our application
+        $(document).ready(function() {
 
-      // Make our variables global to the runtime of our application
-      var firstGem; // between 1-12 for each gem
-      var secondGem;
-      var thirdGem;
-      var fourthGem;
-      var operator;
-      var total = 0; //this will hold the running total for all the clicked gem's values
-      var target; //total that player must match to win between   19-120
-      var gemRand = 0;
-      var wins;
-      var losses;
+        // Make our variables global to the runtime of our application
+        var firstGem; // between 1-12 for each gem
+        var secondGem;
+        var thirdGem;
+        var fourthGem;
+        var total = 0; //this will hold the running total for all the clicked gem's values
+        var target; //total that player must match to win between   19-120
+        var gemRand = 0;
+        var wins;
+        var losses;
 
-      var isOperatorChosen; //unnecessary?
-      var isCalculated;  // unnecessary?
+        // create a function that randomly chooses a value between 1 and 12 for a gem
+            // debugger
+        function gemNumber(){
+        gemRand=(Math.floor(Math.random() * 12)+1);
+        return gemRand;
+        };
 
-      // create a function that randomly chooses a value between 1 and 12 for a gem
-        // debugger
-      function gemNumber(){
-      gemRand=(Math.floor(Math.random() * 12)+1);
-      return gemRand;
-      console.log("gemRand is : " + gemRand);
-    };
+        // randomly chooses a value between 19 and 120 for the target
+        target=(Math.floor(Math.random() * 102)+19);
+        console.log("target is : " + target);
 
-    // Add an on click listener to the element that has the class "reset"
-    $(".clear").on("click", function()
-    {
-             
-    //  reset of the app
-    function resetGame() {
-        firstGem = "";
-        secondGem = "";
-        thirdGem = "";
-        fourthGem = "";
-        total = 0;
-        target = "";
+        // Add an on click listener to the element that has the class "reset"
+        $(".clear").on("click", function()
+        {
+                
+        //  reset of the app
+        function resetGame() {
+            firstGem = "";
+            secondGem = "";
+            thirdGem = "";
+            fourthGem = "";
+            total = 0;
+            target = "";
 
-        $("#first-gem, #second-gem, #third-gem, #fourth-gem").empty();
-      }
-    });
+            $("#first-gem, #second-gem, #third-gem, #fourth-gem").empty();
+        }
+        });
 
     //give each gem a random number.
     firstGem = gemNumber();
@@ -124,7 +123,7 @@
         total = total + firstGem;
     });
 
-    console.log("total after parse is " + total);
+    // console.log("total after parse is " + total);
     console.log("total is a " + typeof total);
 
     $("#gem2").on("click", function()
@@ -143,27 +142,35 @@
     });
 
     console.log("running total is: " + total);
-    
-
-
-    // Set the HTML of the + to the value of the gem that was clicked
 
 
 
-    // Use parseInt to convert our string representation of numbers into actual integers-------is this neccessary?
 
 
-    // Then run the operation and set the HTML of the result of that operation?????
-
-    // Add an on click listener to all elements that have the class "clear"------resets the game
-
-    // Call initializeCalculater so we can reset the state of our app------resets the game
-
-    // Call initializeCalculater so we can set the state of our app------resets the game
 
 
+
+    // if total === target, player wins
+    // wins = wins + 1
+
+    if( total === target ) {
+      wins = wins + 1;
       
-      
+      resultHtml02 = 
+      "<p>Wins: " + wins + "</p>" +
+      "<p>Losses: " + losses + "</p>";
+      document.getElementById("game2").innerHTML = resultHtml02;
+    }
+
+    // if total > target, player loses
+    // losses = losses + 1
+  if(total > target){
+    losses = losses + 1;
+    resultHtml02 = 
+    "<p>Wins: " + wins + "</p>" +
+    "<p>Losses: " + losses + "</p>";
+    document.getElementById("game2").innerHTML = resultHtml02;
+  }
       
       
     });
