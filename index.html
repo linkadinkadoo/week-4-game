@@ -1,182 +1,131 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- <link rel="icon" href="../../../../favicon.ico"> -->
 
-  <!-- Added link to the jQuery Library -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  
-    <!-- Added a link to Bootstrap-->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-  
-</head>
-<body>
-    <div class="jumbotron">
-        <h1 class="text-center">jQuery Calculator</h1>
-        <h3 class="text-center">Perform basic mathematic operations using the power of jQuery!</h3>
+    <title>Gem Game</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <!-- <link href="assets/css" rel="stylesheet"> -->
+    <!-- Custom styles for this template -->
+    <link href="assets/css/reset.css" rel="stylesheet">
+    <link href="assets/css/gems.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="assets/javascript/gems.js"></script>
+    <script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+  </head>
+  <body>
+    <header>
+      
+    </header>
+    <main role="main">
+      <section id="top-jumbotron" class="jumbotron text-center">
+        <div class="container">
+          <h1 class="jumbotron-heading">Gem Card Game Go!</h1>
+          <p id="subHeading">Super Lucky Fun Time !</p>
+        </div>
+      </section>
+      <div class="album">
+        <div class="container">
+          <div class="row">
+            <div class="card col-2 offset-md-2">
+                  <img src="assets/images/purple-gem.png" id="gem1" class="img-fluid" alt="Card image cap">
+                  <p class="card-text">Amethyst</p>
+            </div>
+
+            <div class="card col-2">
+              <img src="assets/images/green-gem.png" id="gem2" class="img-fluid" alt="Card image cap">
+              <p class="card-text">Emerald</p>
+            </div>
+
+            <div class="card col-2">
+              <img src="assets/images/pink-gem.png" id="gem3" class="img-fluid" alt="Card image cap">
+              <p class="card-text">Ruby</p>
+            </div>
+
+            <div class="card col-2">
+              <img src="assets/images/blue-gem.png" id="gem4" class="img-fluid" alt="Card image cap">
+              <p class="card-text">Saffire</p>
+            </div>
+
+            <section class="container" id="lower-jumbotron">
+              <!-- <div class="container"> -->
+                <h2 class="jumbotron-instructions1" id="line1">Try to guess the Target Number by clicking on the gems!</h1>
+                <h2 class="jumbotron-instructions2" id="line2">Each gem has a different, hidden amount!</h2>
+                <!-- <p>
+                  <a href="#" class="btn btn-primary">Reset Game</a>
+                </p> -->
+              <!-- </div> -->
+            </section>
+  <!-- <div class="album"> -->
+    <div class="container">
+      <div class="row">
+        <div class="card col-2 offset-md-2">
+          <!-- <img src="assets/images/purple-gem.png" class="img-fluid" alt="Card image cap"> -->
+          <p class = "cart-text numberology" id="target">00</p>
+          <p class="card-text">Target Number</p>
+        </div>
+
+        <div class="card col-2">
+          <!-- <img src="assets/images/green-gem.png" class="img-fluid" alt="Card image cap"> -->
+          <p class = "cart-text numberology" id="total">00</p>
+          <p class="card-text">Your Total</p>
+        </div>
+
+        <div class="card col-2">
+          <!-- <img src="assets/images/pink-gem.png" class="img-fluid" alt="Card image cap"> -->
+          <p class = "cart-text numberology" id="winResult">00</p>
+          <p class="card-text">Wins</p>
+        </div>
+    
+        <div class="card col-2">
+          <!-- <img src="assets/images/blue-gem.png" class="img-fluid" alt="Card image cap"> -->
+          <p class = "cart-text numberology" id="loseResult">00</p>
+          <p class="card-text">Losses</p>
+        
       </div>
-    
-      <div class="container">
-    
-        <div class="row">
-    
-          <!-- Calculator Panel -->
-          <div class="col-lg-4">
-            <div class="panel panel-default">
-              <div class="panel-heading">
-                <h3 class="panel-title">Calculator</h3>
-              </div>
-    
-              <div class="panel-body">
-                <button id="gem1" class="btn btn-primary number" value="1"><h1>1</h1></button>
-                <button id="gem2" class="btn btn-primary number" value="2"><h1>2</h1></button>
-                <button id="gem3" class="btn btn-primary number" value="3"><h1>3</h1></button>
-                <button id="gem4" class="btn btn-primary number" value="4"><h1>4</h1></button>
-                <br><br>
 
-                <br><br>
-                <button id="button-clear" class="btn btn-default clear" value="clear"><h1>New Game</h1></button>
-              </div>
-            </div>
-          </div>
-    
-          <!-- Result Panel -->
-          <div class="col-lg-6">
-            <div class="panel panel-default">
-              <div class="panel-heading">
-                <h3 class="panel-title">Result</h3>
-              </div>
-              <div class="panel-body">
-                <hr>
-                <h1 id="result"></h1>
-              </div>
-            </div>
-          </div>
+      </div>
+    </div>
+  <!-- </div> -->
         </div>
       </div>
+      <br><br>
+      <div class="row">
+        <div class="col-5"></div>
+          <div class="col-2">
+            <h2>
+              <a href="#" class="btn btn-primary reset">Reset Game</a>
+            </h2>
+          </div>
+        </div>
+        <div class="col-5"></div>
+      </div>
 
-      <script type="text/javascript">
-      
-        // Make our variables global to the runtime of our application
-        $(document).ready(function() {
-
-        // Make our variables global to the runtime of our application
-        var firstGem; // between 1-12 for each gem
-        var secondGem;
-        var thirdGem;
-        var fourthGem;
-        var total = 0; //this will hold the running total for all the clicked gem's values
-        var target; //total that player must match to win between   19-120
-        var gemRand = 0;
-        var wins;
-        var losses;
-
-        // create a function that randomly chooses a value between 1 and 12 for a gem
-            // debugger
-        function gemNumber(){
-        gemRand=(Math.floor(Math.random() * 12)+1);
-        return gemRand;
-        };
-
-        // randomly chooses a value between 19 and 120 for the target
-        target=(Math.floor(Math.random() * 102)+19);
-        console.log("target is : " + target);
-
-        // Add an on click listener to the element that has the class "reset"
-        $(".clear").on("click", function()
-        {
-                
-        //  reset of the app
-        function resetGame() {
-            firstGem = "";
-            secondGem = "";
-            thirdGem = "";
-            fourthGem = "";
-            total = 0;
-            target = "";
-
-            $("#first-gem, #second-gem, #third-gem, #fourth-gem").empty();
-        }
-        });
-
-    //give each gem a random number.
-    firstGem = gemNumber();
-    secondGem = gemNumber();
-    thirdGem = gemNumber();
-    fourthGem = gemNumber();
-
-    console.log("gemNumber1 is : " + firstGem);
-    console.log("gemNumber2 is : " + secondGem);
-    console.log("gemNumber3 is : " + thirdGem);
-    console.log("gemNumber4 is : " + fourthGem);
-
-    console.log("firstGem is " + firstGem);
-    console.log("firstGem is a " + typeof firstGem);
+    </main>
 
 
-    // Add on click listeners to the gems
-    $("#gem1").on("click", function()
-    {
-        total = total + firstGem;
-    });
-
-    // console.log("total after parse is " + total);
-    console.log("total is a " + typeof total);
-
-    $("#gem2").on("click", function()
-    {
-        total = total + secondGem;
-    });
     
-    $("#gem3").on("click", function()
-    {
-        total = total + thirdGem;
-    });
-
-    $("#gem4").on("click", function()
-    {
-        total = total + fourthGem;
-    });
-
-    console.log("running total is: " + total);
-
-
-
-
-
-
-
-
-    // if total === target, player wins
-    // wins = wins + 1
-
-    if( total === target ) {
-      wins = wins + 1;
-      
-      resultHtml02 = 
-      "<p>Wins: " + wins + "</p>" +
-      "<p>Losses: " + losses + "</p>";
-      document.getElementById("game2").innerHTML = resultHtml02;
-    }
-
-    // if total > target, player loses
-    // losses = losses + 1
-  if(total > target){
-    losses = losses + 1;
-    resultHtml02 = 
-    "<p>Wins: " + wins + "</p>" +
-    "<p>Losses: " + losses + "</p>";
-    document.getElementById("game2").innerHTML = resultHtml02;
-  }
-      
-      
-    });
-      
-      </script>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
     
     
-</body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <!-- <script>
+      Holder.addTheme('thumb', {
+        bg: '#55595c',
+        fg: '#eceeef',
+        text: 'Thumbnail'
+      });
+    </script> -->
+  </body>
 </html>

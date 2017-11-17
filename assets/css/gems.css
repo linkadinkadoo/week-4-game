@@ -1,0 +1,122 @@
+@font-face{
+  font-family: Gang-of-Three;
+  src: url(go3v2.ttf);
+}
+@font-face{
+  font-family: Karate;
+  src: url(Karate.ttf);
+}
+
+h1{
+  font-family: "Gang-of-Three";
+  color: rgb(255, 244, 91);
+}
+h2{
+  font-size: 20px;
+}
+h3{
+  font-size: 40px;
+}
+
+body {
+  /* min-height: 75rem; */
+  font-family: "Gang-of-Three";
+  background-color: #CA322A;
+}
+.navbar {
+  margin-bottom: 0;
+}
+
+.jumbotron {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  margin-bottom: 0;
+  background-color: #CA322A;
+  font: "Gang-of-Three";
+}
+
+#lower-jumbotron{
+  padding-top: 1em;
+  padding-bottom: 1em;
+  margin-bottom: 0;
+  background-color: rgb(0, 0, 0);
+  font: "Gang-of-Three";
+  border-radius: 25px;
+  max-width: 47em;
+  /* font-size: 20px; */
+}
+.jumbotron-instructions1{
+  color: rgb(245, 245, 39);
+  text-align: center;
+  /* font-family: Karate; */
+}
+.jumbotron-instructions2{
+  color: rgb(0, 195, 255);
+  text-align: center;
+  /* font-family: Karate; */
+}
+.jumbotron p:last-child {
+  margin-bottom: 0;
+}
+.jumbotron-heading {
+  font-weight: bold;
+  font-size: 100px;
+}
+.jumbotron .container {
+  max-width: 60rem;
+}
+#subHeading{
+  transform: rotate(-8deg);
+  font-size: 40px;
+  z-index: 5;
+  font-weight: bold;
+  color: rgb(255, 252, 241);
+  font-family: Karate;
+  
+}
+.album {
+  min-height: 50rem; /* Can be removed; just added for demo purposes */
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  background-color: #f7f7f7;
+  background-image: url("../images/RainbowMan.JPG");
+  font: "Gang-of-Three";
+}
+
+.card {
+  float: left;
+  width: 10%;
+  padding: .75rem;
+  border-radius: 25px;
+  font: "Gang-of-Three";
+  
+}
+.card > img {
+  margin-bottom: .75rem;
+  align-content: center;
+}
+.card-text {
+  font-size: 150%;
+  text-align: center;
+  font-weight: bold;
+  font: "Gang-of-Three";
+}
+.numberology {
+  font-size: 400%;
+  text-align: center;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+footer {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+footer p {
+  margin-bottom: .25rem;
+}
+.btn{
+  margin: 10px;
+  outline: solid yellow 4px;
+}
+
