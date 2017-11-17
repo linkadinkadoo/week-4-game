@@ -60,13 +60,13 @@ $(document).ready(function () {
     console.log("firstGem is " + firstGem);
     console.log("firstGem is a " + typeof firstGem);
 
-    function changeToBlack(){
+    function changeToBlack() {
         document.getElementById("line1").style.color = "black";
     }
 
-    function youLose(){
-        resultYouLose = 
-        "<h3>You Lose!</h3>";
+    function youLose() {
+        resultYouLose =
+            "<h3>You Lose!</h3>";
         document.getElementById("line1").innerHTML = resultYouLose;
         document.getElementById("line1").style.color = "red";
         resultBlank = "<p></p>";
@@ -74,15 +74,15 @@ $(document).ready(function () {
         setTimeout(changeToBlack, 2500);
     }
 
-    function youWin(){
-        resultYouWin = 
-        "<h3>You Win!</h3>";
+    function youWin() {
+        resultYouWin =
+            "<h3>You Win!</h3>";
         document.getElementById("line1").innerHTML = resultYouWin;
         document.getElementById("line1").style.color = "rgb(30, 255, 0)";
         resultBlank = "<p></p>";
         document.getElementById("line2").innerHTML = resultBlank;
         setTimeout(changeToBlack, 2500);
-    }   
+    }
 
     // .style.color = "magenta";
 
@@ -102,7 +102,7 @@ $(document).ready(function () {
             console.log("Losses: " + losses);
             resultHtml01 = wins;
             resultHtml02 = losses;
-            total=0;
+            total = 0;
             document.getElementById("winResult").innerHTML = resultHtml01;
             document.getElementById("loseResult").innerHTML = resultHtml02;
             document.getElementById("total").innerHTML = total;

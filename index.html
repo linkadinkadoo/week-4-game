@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
@@ -10,7 +11,8 @@
     <title>Gem Game</title>
 
     <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
+        crossorigin="anonymous">
     <!-- <link href="assets/css" rel="stylesheet"> -->
     <!-- Custom styles for this template -->
     <link href="assets/css/reset.css" rel="stylesheet">
@@ -18,108 +20,112 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="assets/javascript/gems.js"></script>
     <script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery.min.js"><\/script>')</script>
-  </head>
-  <body>
+</head>
+
+<body>
     <header>
-      
+
     </header>
     <main role="main">
-      <section id="top-jumbotron" class="jumbotron text-center">
-        <div class="container">
-          <h1 class="jumbotron-heading">Gem Card Game Go!</h1>
-          <p id="subHeading">Super Lucky Fun Time !</p>
-        </div>
-      </section>
-      <div class="album">
-        <div class="container">
-          <div class="row">
-            <div class="card col-2 offset-md-2">
-                  <img src="assets/images/purple-gem.png" id="gem1" class="img-fluid" alt="Card image cap">
-                  <p class="card-text">Amethyst</p>
+        <section id="top-jumbotron" class="jumbotron text-center">
+            <div class="container">
+                <h1 class="jumbotron-heading">Gem Card Game Go!</h1>
+                <p id="subHeading">Super Lucky Fun Time !</p>
             </div>
+        </section>
+        <div class="album">
+            <div class="container">
+                <div class="row">
+                    <div class="card col-2 offset-md-2">
+                        <img src="assets/images/purple-gem.png" id="gem1" class="img-fluid" alt="Card image cap">
+                        <p class="card-text">Amethyst</p>
+                    </div>
 
-            <div class="card col-2">
-              <img src="assets/images/green-gem.png" id="gem2" class="img-fluid" alt="Card image cap">
-              <p class="card-text">Emerald</p>
-            </div>
+                    <div class="card col-2">
+                        <img src="assets/images/green-gem.png" id="gem2" class="img-fluid" alt="Card image cap">
+                        <p class="card-text">Emerald</p>
+                    </div>
 
-            <div class="card col-2">
-              <img src="assets/images/pink-gem.png" id="gem3" class="img-fluid" alt="Card image cap">
-              <p class="card-text">Ruby</p>
-            </div>
+                    <div class="card col-2">
+                        <img src="assets/images/pink-gem.png" id="gem3" class="img-fluid" alt="Card image cap">
+                        <p class="card-text">Ruby</p>
+                    </div>
 
-            <div class="card col-2">
-              <img src="assets/images/blue-gem.png" id="gem4" class="img-fluid" alt="Card image cap">
-              <p class="card-text">Saffire</p>
-            </div>
+                    <div class="card col-2">
+                        <img src="assets/images/blue-gem.png" id="gem4" class="img-fluid" alt="Card image cap">
+                        <p class="card-text">Saffire</p>
+                    </div>
 
-            <section class="container" id="lower-jumbotron">
-              <!-- <div class="container"> -->
-                <h2 class="jumbotron-instructions1" id="line1">Try to guess the Target Number by clicking on the gems!</h1>
-                <h2 class="jumbotron-instructions2" id="line2">Each gem has a different, hidden amount!</h2>
-                <!-- <p>
+                    <section class="container" id="lower-jumbotron">
+                        <!-- <div class="container"> -->
+                        <h2 class="jumbotron-instructions1" id="line1">Try to guess the Target Number by clicking on the gems!</h1>
+                            <h2 class="jumbotron-instructions2" id="line2">Each gem has a different, hidden amount!</h2>
+                            <!-- <p>
                   <a href="#" class="btn btn-primary">Reset Game</a>
                 </p> -->
-              <!-- </div> -->
-            </section>
-  <!-- <div class="album"> -->
-    <div class="container">
-      <div class="row">
-        <div class="card col-2 offset-md-2">
-          <!-- <img src="assets/images/purple-gem.png" class="img-fluid" alt="Card image cap"> -->
-          <p class = "cart-text numberology" id="target">00</p>
-          <p class="card-text">Target Number</p>
-        </div>
+                            <!-- </div> -->
+                    </section>
+                    <!-- <div class="album"> -->
+                    <div class="container">
+                        <div class="row">
+                            <div class="card col-2 offset-md-2">
+                                <!-- <img src="assets/images/purple-gem.png" class="img-fluid" alt="Card image cap"> -->
+                                <p class="cart-text numberology" id="target">0</p>
+                                <p class="card-text">Target Number</p>
+                            </div>
 
-        <div class="card col-2">
-          <!-- <img src="assets/images/green-gem.png" class="img-fluid" alt="Card image cap"> -->
-          <p class = "cart-text numberology" id="total">00</p>
-          <p class="card-text">Your Total</p>
-        </div>
+                            <div class="card col-2">
+                                <!-- <img src="assets/images/green-gem.png" class="img-fluid" alt="Card image cap"> -->
+                                <p class="cart-text numberology" id="total">0</p>
+                                <p class="card-text">Your Total</p>
+                            </div>
 
-        <div class="card col-2">
-          <!-- <img src="assets/images/pink-gem.png" class="img-fluid" alt="Card image cap"> -->
-          <p class = "cart-text numberology" id="winResult">00</p>
-          <p class="card-text">Wins</p>
-        </div>
-    
-        <div class="card col-2">
-          <!-- <img src="assets/images/blue-gem.png" class="img-fluid" alt="Card image cap"> -->
-          <p class = "cart-text numberology" id="loseResult">00</p>
-          <p class="card-text">Losses</p>
-        
-      </div>
+                            <div class="card col-2">
+                                <!-- <img src="assets/images/pink-gem.png" class="img-fluid" alt="Card image cap"> -->
+                                <p class="cart-text numberology" id="winResult">0</p>
+                                <p class="card-text">Wins</p>
+                            </div>
 
-      </div>
-    </div>
-  <!-- </div> -->
+                            <div class="card col-2">
+                                <!-- <img src="assets/images/blue-gem.png" class="img-fluid" alt="Card image cap"> -->
+                                <p class="cart-text numberology" id="loseResult">0</p>
+                                <p class="card-text">Losses</p>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- </div> -->
+                </div>
+            </div>
+            <br>
+            <br>
+            <div class="row">
+                <div class="col-5"></div>
+                <div class="col-2">
+                    <h2>
+                        <a href="#" class="btn btn-primary reset">Reset Game</a>
+                    </h2>
+                </div>
+            </div>
+            <div class="col-5"></div>
         </div>
-      </div>
-      <br><br>
-      <div class="row">
-        <div class="col-5"></div>
-          <div class="col-2">
-            <h2>
-              <a href="#" class="btn btn-primary reset">Reset Game</a>
-            </h2>
-          </div>
-        </div>
-        <div class="col-5"></div>
-      </div>
 
     </main>
 
 
-    
+
     <!-- Bootstrap core JavaScript
     ================================================== -->
-    
+
     <!-- Placed at the end of the document so the pages load faster -->
     <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
-    
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+        crossorigin="anonymous"></script>
     <!-- <script>
       Holder.addTheme('thumb', {
         bg: '#55595c',
@@ -127,5 +133,6 @@
         text: 'Thumbnail'
       });
     </script> -->
-  </body>
+</body>
+
 </html>
